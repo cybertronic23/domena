@@ -11,11 +11,13 @@ Source / Adapter Layer
           ↓
 Experience Layer
           ↓
-Validation and Processing (Data Plane)
+Validation, Quality, and Annotation (Data Plane)
           ↓
 Dataset / Storage Layer
           ↓
 Training and Evaluation Consumers
+          ↓
+Failure Analysis and Collection Feedback
 ```
 
 ### Source / adapter layer
@@ -28,7 +30,11 @@ Experience is the first-class domain concept for interaction-derived information
 
 ### Data plane
 
-The Python data plane validates, normalises only where a generic invariant requires it, transforms data, and creates datasets. It must preserve enough provenance to trace data back to a source without making source internals part of the common model.
+The Python data plane validates, normalises only where a generic invariant requires it, transforms data, and creates datasets. It includes distinct extension points for quality assessment and annotation. It must preserve enough provenance to trace data back to a source without making source internals part of the common model.
+
+### Quality and annotation
+
+Structural validation answers whether data is well-formed; data quality answers whether it is fit for a declared use; annotation adds human- or machine-produced semantic information. These are separate, versioned assets linked to experience and datasets. They must support review and provenance, but neither a labelling UI nor an automated labeller belongs in the first milestone.
 
 ### Dataset and storage layer
 
@@ -36,7 +42,11 @@ Dataset construction and storage are separate concerns. Storage representations 
 
 ### Consumers
 
-Training and evaluation consume datasets through stable reading and inspection interfaces. They are downstream consumers, not dependencies of the core.
+Training and evaluation consume datasets through stable reading and inspection interfaces. Evaluation produces versioned results and failure evidence that can be associated with datasets, model/policy versions, tasks, and source conditions. Consumers are downstream dependencies, not core dependencies.
+
+### Feedback loop
+
+Failure analysis turns evaluation evidence and collection/quality issues into recommendations for targeted collection, curation, annotation, or quality rules. This closes the loop without requiring Domena v0.1 to own training, deployment, or a scheduler.
 
 ## Dependency direction
 
@@ -52,3 +62,4 @@ There is currently no Go service, web UI, database requirement, scheduler, distr
 - The canonical storage representation and media-asset layout.
 - Whether a durable episode is the v0.1 interchange unit.
 - The minimum provenance and time model needed across sources.
+- The identity and versioning model for annotations, quality reports, evaluations, and failure cases.

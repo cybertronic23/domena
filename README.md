@@ -16,7 +16,7 @@ The project is in its architecture and domain-design phase. It does not yet prov
 
 Domena will provide clear boundaries from data sources through experience validation and processing to datasets consumed by training and evaluation workflows. It is designed to stay independent of any individual simulator or robot platform.
 
-See the [architecture](docs/architecture.md), [experience-model discussion](docs/experience-model.md), [roadmap](docs/roadmap.md), and the first [engineering specification](docs/specs/001-experience-schema.md).
+See the [architecture](docs/architecture.md), [experience-model discussion](docs/experience-model.md), [data lifecycle](docs/data-lifecycle.md), [roadmap](docs/roadmap.md), and [engineering specifications](docs/specs/).
 
 ## License
 

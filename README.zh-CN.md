@@ -16,7 +16,7 @@ Domena 是一个开源的 Python 数据平面项目，服务于机器人与智�
 
 Domena 将提供从数据来源，经由经验校验和处理，到训练与评估可消费数据集的清晰边界；同时保持对任何单一模拟器或机器人平台的独立性。
 
-请参阅[架构说明](docs/architecture.zh-CN.md)、[经验模型讨论](docs/experience-model.zh-CN.md)、[路线图](docs/roadmap.zh-CN.md)和首份[工程规范](docs/specs/001-experience-schema.zh-CN.md)。
+请参阅[架构说明](docs/architecture.zh-CN.md)、[经验模型讨论](docs/experience-model.zh-CN.md)、[数据闭环](docs/data-lifecycle.zh-CN.md)、[路线图](docs/roadmap.zh-CN.md)和[工程规范](docs/specs/)。
 
 ## 许可证
 

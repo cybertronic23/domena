@@ -14,7 +14,7 @@ Implement the approved v0.1 boundary and a CPU-only mock source that produces re
 
 ## Phase 2 — Validation and dataset storage
 
-Add generic validation, a local dataset serialisation and reading path, and basic inspection/statistics. Establish tests around malformed data and round trips.
+Add generic validation, a local dataset serialisation and reading path, and basic inspection/statistics. Establish tests around malformed data and round trips. Define quality-report and annotation contracts, dataset lineage, and task/provenance contracts, but do not build annotation operations yet.
 
 ## Phase 3 — First real simulator adapter
 
@@ -22,8 +22,10 @@ Add a ManiSkill adapter behind the established source boundary. Its installation
 
 ## Phase 4 — Larger-scale data processing
 
-Evaluate batch processing, richer multimodal asset handling, dataset versioning, lineage, quality workflows, and distributed execution only when workloads demonstrate the need.
+Evaluate batch processing, richer multimodal asset handling, dataset versioning, lineage, curation, annotation and quality workflows, evaluation-result management, and distributed execution only when workloads demonstrate the need.
 
 ## Phase 5 — Control plane and platformisation
 
 Consider registry, job, metadata, API, and orchestration capabilities. A Go control plane is a possible future implementation choice, subject to a separate design decision.
+
+Across these phases, failure evidence should be able to inform targeted collection and curation, forming a measurable data flywheel.

@@ -17,6 +17,7 @@ Define the smallest source-neutral contract needed to carry a bounded interactio
 - Define structural validation invariants, actionable validation errors, and a path for source/task-specific validation rules.
 - Define a versioned serialisation envelope and a read/write round-trip expectation without prematurely selecting a columnar, database, or media backend.
 - Allow inspection to report basic trajectory and modality statistics without depending on training code.
+- Carry the minimum provenance needed for later annotations, quality reports, and evaluation/failure evidence to reference the trajectory. Those assets are not part of the v0.1 trajectory payload.
 
 ## Non-goals
 
@@ -24,6 +25,7 @@ Define the smallest source-neutral contract needed to carry a bounded interactio
 - A fixed Pydantic hierarchy for every concept or modality.
 - Distributed ingestion, cloud storage, registry services, user authentication, or dataset version management.
 - Training, evaluation, replay, or visualisation frameworks.
+- Annotation operations, labelling UIs, automatic labellers, quality scoring systems, or evaluation runners.
 - A ManiSkill adapter or any concrete source implementation beyond the later mock source.
 
 ## Domain boundaries
