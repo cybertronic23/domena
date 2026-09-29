@@ -172,6 +172,14 @@ venv.bak/
 .dmypy.json
 dmypy.json
 
+# Private project research, design exploration, and working notes.
+# These materials are intentionally local-only; implementation-ready changes
+# are recorded under openspec/ instead.
+notes/
+
+# Local OpenSpec workflow instructions generated for the current workspace.
+.codex/
+
 # Pyre type checker
 .pyre/
 

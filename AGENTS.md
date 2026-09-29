@@ -20,9 +20,9 @@ It is not a wrapper for one simulator, a robotics tutorial, a collection of scri
 - Use explicit type hints for public APIs and keep Python package boundaries clear.
 - Keep imports directed inward: adapters and storage may depend on core contracts; core must not depend on a concrete source or backend.
 - Write automated tests for observable behavior, edge cases, validation failures, and serialization boundaries. Tests must run locally on macOS without GPU or external services.
-- Do not introduce a concrete Experience/Episode/Step implementation until `docs/specs/001-experience-schema.md` is approved.
+- Do not introduce a concrete Experience/Episode/Step implementation until the corresponding OpenSpec change specification is approved.
 - Do not leak a source's terminology or payload shape into a generic API. Translate at the adapter boundary.
-- Update the relevant design document with any architecture decision. Record unresolved trade-offs rather than hiding them in implementation details.
+- Record implementation-ready architecture decisions in OpenSpec. Keep unresolved trade-offs and exploratory rationale in local `notes/` rather than exposing them as public documentation.
 
 ## Change discipline
 

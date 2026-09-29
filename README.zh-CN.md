@@ -10,13 +10,13 @@ Domena 是一个开源的 Python 数据平面项目，服务于机器人与智�
 
 > Experience（经验）→ Dataset（数据集）→ Training / Evaluation（训练 / 评估）→ Better Experience（更好的经验）
 
-项目当前处于架构与领域设计阶段，尚未提供公开的经验 Schema、模拟器适配器或数据集格式。
+项目已启动 M1a：数据源无关的 Experience 契约实现。它尚未提供真实机器人或模拟器适配器、数据集格式或训练框架。
 
-## 项目方向
+## 项目状态
 
-Domena 将提供从数据来源，经由经验校验和处理，到训练与评估可消费数据集的清晰边界；同时保持对任何单一模拟器或机器人平台的独立性。
+Domena 目前处于首个实现阶段。面向用户与贡献者的公开文档会在对应接口和行为稳定后发布到 `docs/`。
 
-请参阅[架构说明](docs/architecture.zh-CN.md)、[经验模型讨论](docs/experience-model.zh-CN.md)、[数据闭环](docs/data-lifecycle.zh-CN.md)、[路线图](docs/roadmap.zh-CN.md)和[工程规范](docs/specs/)。
+已确定、可直接实施的变更设计记录在 [`openspec/`](openspec/)；探索性设计笔记与调研来源仅保存在本地，不属于仓库内容。
 
 ## 许可证
 
