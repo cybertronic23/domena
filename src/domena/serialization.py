@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 from pathlib import Path
 from typing import Any
 
@@ -27,6 +28,11 @@ def dumps_episode(episode: Episode) -> str:
     """Encode a valid episode using stable JSON key ordering."""
     _require_valid(episode)
     return json.dumps(_episode_to_data(episode), ensure_ascii=False, sort_keys=True, separators=(",", ":"), allow_nan=False)
+
+
+def fingerprint_episode(episode: Episode) -> str:
+    """Return the SHA-256 of the canonical local Episode JSON envelope."""
+    return hashlib.sha256(dumps_episode(episode).encode("utf-8")).hexdigest()
 
 
 def loads_episode(payload: str | bytes) -> Episode:

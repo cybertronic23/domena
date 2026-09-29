@@ -23,6 +23,7 @@ It is not a wrapper for one simulator, a robotics tutorial, a collection of scri
 - Do not introduce a concrete Experience/Episode/Step implementation until the corresponding OpenSpec change specification is approved.
 - Do not leak a source's terminology or payload shape into a generic API. Translate at the adapter boundary.
 - Record implementation-ready architecture decisions in OpenSpec. Keep unresolved trade-offs and exploratory rationale in local `notes/` rather than exposing them as public documentation.
+- Keep committed design, OpenSpec, and public documentation bilingual: maintain the English source and a corresponding `*.zh-CN.md` Chinese version, with reciprocal links near the top. Chinese is the primary reading path for this project owner.
 
 ## Change discipline
 

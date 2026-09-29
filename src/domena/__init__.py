@@ -14,16 +14,30 @@ from .contract import (
 )
 from .inspection import EpisodeInspection, inspect_episode
 from .mock import make_mock_episode
-from .serialization import dumps_episode, loads_episode, read_episode, write_episode
+from .serialization import dumps_episode, fingerprint_episode, loads_episode, read_episode, write_episode
+from .dataset import (
+    DATASET_MANIFEST_SCHEMA_VERSION, Construction, DatasetManifest, DatasetManifestInspection,
+    DatasetManifestValidationResult, DatasetMember, EvidenceReference, SourceNamespace,
+    dumps_manifest, fingerprint_manifest, inspect_manifest, loads_manifest, read_manifest,
+    resolve_local_member, validate_manifest, write_manifest,
+)
 from .validation import ValidationIssue, ValidationResult, validate_episode
 
 __all__ = [
     "SCHEMA_VERSION",
+    "DATASET_MANIFEST_SCHEMA_VERSION",
     "Asset",
     "AssetReference",
     "Episode",
+    "Construction",
+    "DatasetManifest",
+    "DatasetManifestInspection",
+    "DatasetManifestValidationResult",
+    "DatasetMember",
+    "EvidenceReference",
     "EpisodeInspection",
     "FrameReference",
+    "SourceNamespace",
     "Outcome",
     "OutcomeStatus",
     "PhysicalContext",
@@ -32,10 +46,19 @@ __all__ = [
     "ValidationIssue",
     "ValidationResult",
     "dumps_episode",
+    "dumps_manifest",
+    "fingerprint_episode",
+    "fingerprint_manifest",
     "inspect_episode",
+    "inspect_manifest",
     "loads_episode",
+    "loads_manifest",
     "make_mock_episode",
     "read_episode",
+    "read_manifest",
+    "resolve_local_member",
     "validate_episode",
+    "validate_manifest",
     "write_episode",
+    "write_manifest",
 ]
