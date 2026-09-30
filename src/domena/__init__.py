@@ -22,6 +22,23 @@ from .dataset import (
     resolve_local_member, validate_manifest, write_manifest,
 )
 from .validation import ValidationIssue, ValidationResult, validate_episode
+from .execution import (
+    IDENTITY_TRANSFORM_ID,
+    IDENTITY_TRANSFORM_VERSION,
+    MATERIALIZED_EPISODE_SCHEMA_ID,
+    BoundedExecutor,
+    BoundedMaterializer,
+    ExecutionOptions,
+    FailureEvidence,
+    JobRun,
+    JobStatus,
+    LocalExecutor,
+    MaterializationReference,
+    OptionalDependencyError,
+    TransformPlan,
+    build_transform_rows,
+    materialized_schema_fingerprint,
+)
 
 __all__ = [
     "SCHEMA_VERSION",
@@ -61,4 +78,19 @@ __all__ = [
     "validate_manifest",
     "write_episode",
     "write_manifest",
+    "IDENTITY_TRANSFORM_ID",
+    "IDENTITY_TRANSFORM_VERSION",
+    "MATERIALIZED_EPISODE_SCHEMA_ID",
+    "BoundedExecutor",
+    "BoundedMaterializer",
+    "ExecutionOptions",
+    "FailureEvidence",
+    "JobRun",
+    "JobStatus",
+    "LocalExecutor",
+    "MaterializationReference",
+    "OptionalDependencyError",
+    "TransformPlan",
+    "build_transform_rows",
+    "materialized_schema_fingerprint",
 ]

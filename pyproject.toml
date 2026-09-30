@@ -11,6 +11,9 @@ license = { file = "LICENSE" }
 
 [project.optional-dependencies]
 rosbag2 = ["mcap>=1.3.0"]
+lance = ["pylance>=0.24"]
+ray = ["ray[data]>=2.40"]
+ray-lance = ["pylance>=0.24", "ray[data]>=2.40"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
