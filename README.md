@@ -21,15 +21,13 @@ Domena is neither another training framework nor a file uploader for robot logs.
 
 ## Why the name “Domena”?
 
-**Domena** is derived from the idea of a **domain**: a bounded realm with its own meaning, rules, and context.
+**Domena** is inspired by the Ancient Greek **δεδομένα (*dedomena*)**, meaning “the things given.” It is the Greek title of Euclid's *Data*, a work concerned with what is given in a problem and what can be derived from those givens. The Latin *datum* carries the same idea: “that which is given.”
 
-In Physical AI, every embodiment, robot model, sensor suite, task, environment, and collection system creates a distinct data domain. Useful infrastructure must connect those domains without flattening away their semantics. That is the idea behind the name:
+The name is a modern, shortened form chosen for the project—not a claim that *Domena* itself is the Ancient Greek word for data. It preserves the sound and story of *dedomena* while remaining concise and memorable.
 
-- **Domain-aware** — preserve task, embodiment, time, calibration, and provenance context.
-- **Domain-neutral** — keep the core independent of ROS, a particular simulator, robot vendor, or storage engine.
-- **Domain-connecting** — carry trustworthy experience across collection, datasets, training, evaluation, and back into better collection.
+That origin fits embodied intelligence particularly well. A robot or simulator continually gives us observations, states, actions, trajectories, sensor streams, and outcomes. On their own, these are merely **the givens**. Domena exists to turn them into governed, verifiable, and reusable experience from which models can learn and better actions can be derived.
 
-The name therefore reflects the project's central design principle: **unify the lifecycle, not erase the domains**.
+**Domena — the data and experience infrastructure for embodied intelligence.**
 
 ## Why Domena?
 
