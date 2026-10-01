@@ -39,6 +39,21 @@ from .execution import (
     build_transform_rows,
     materialized_schema_fingerprint,
 )
+from .control_plane import (
+    CONTROL_JOB_SCHEMA_VERSION,
+    ControlJobStatus,
+    DataJobSpec,
+    JobAttemptIdentity,
+    JobInputReference,
+    JobOutputTarget,
+    JobTransition,
+    JobTransitionReason,
+    WorkerLease,
+    data_job_to_dict,
+    dumps_data_job,
+    is_allowed_job_transition,
+    loads_data_job,
+)
 
 __all__ = [
     "SCHEMA_VERSION",
@@ -93,4 +108,17 @@ __all__ = [
     "TransformPlan",
     "build_transform_rows",
     "materialized_schema_fingerprint",
+    "CONTROL_JOB_SCHEMA_VERSION",
+    "ControlJobStatus",
+    "DataJobSpec",
+    "JobAttemptIdentity",
+    "JobInputReference",
+    "JobOutputTarget",
+    "JobTransition",
+    "JobTransitionReason",
+    "WorkerLease",
+    "data_job_to_dict",
+    "dumps_data_job",
+    "is_allowed_job_transition",
+    "loads_data_job",
 ]

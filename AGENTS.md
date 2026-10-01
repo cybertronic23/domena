@@ -10,7 +10,7 @@ It is not a wrapper for one simulator, a robotics tutorial, a collection of scri
 
 - Treat **experience** as the primary domain concept. Do not reduce it prematurely to a storage schema.
 - Preserve the boundary between Domena core and sources. Simulator-, robot-, and teleoperation-specific concepts belong in adapters, never in the core domain.
-- The initial product is a Python 3.11+ data plane. A Go control plane is a future option, not current work. Do not add Go or Rust without an approved architecture decision.
+- The data plane is Python 3.11+ with Ray Data and Lance. M4 adds the approved Go control plane and TypeScript web product; Go owns product/API orchestration and must not reimplement Python data-plane logic. Do not add Rust or another control-plane stack without an approved architecture decision.
 - Add dependencies only for a present, demonstrated need. Do not pre-add distributed systems, GPU tooling, cloud services, or a specific simulator.
 - Prefer small composable interfaces and standard-library types before choosing frameworks or model libraries.
 - Keep domain concepts, protocols/interfaces, validation, storage representations, and adapters distinct. A persisted representation is not automatically the domain model.
